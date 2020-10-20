@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var hinhchunhat = {
+        chieudai: 5,
+        chieurong: 2,
+        tinhchuvi: function () {
+            return ("chuvi="+ (this.chieudai+this.chieurong)*2);
+
+        },
+        tinhdientich: function (){
+            return ("dientich="+ this.chieudai * this.chieurong);
+        }
+
+    }
+    console.log(hinhchunhat.tinhchuvi());
+    console.log(hinhchunhat.tinhdientich());
+</script>
+</body>
+</html>
