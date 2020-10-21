@@ -5,21 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+
 <script>
-    var hinhchunhat = {
-        chieudai: 5,
-        chieurong: 2,
-        tinhchuvi: function () {
-            return ("chuvi="+ (this.chieudai+this.chieurong)*2);
-
+    var hcn={
+        chieudai:50,
+        chieurong:30,
+        chuvi:function (){
+            return ("<br>"+"Chu vi="+(this.chieudai+this.chieurong)*2+"<br>");
         },
-        tinhdientich: function (){
-            return ("dientich="+ this.chieudai * this.chieurong);
+        dientich:function (){
+            return ("Dientich="+(this.chieudai*this.chieurong));
         }
-
     }
-    console.log(hinhchunhat.tinhchuvi());
-    console.log(hinhchunhat.tinhdientich());
+    document.write(hcn.chuvi());
+    document.write(hcn.dientich());
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0,0,150,75);
 </script>
 </body>
 </html>
